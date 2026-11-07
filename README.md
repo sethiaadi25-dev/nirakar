@@ -41,6 +41,10 @@ To keep a project out of the showcase, set `featured: false`. It still appears i
 
 The colours and fonts are tokens at the top of `assets/css/style.css`. To change the accent colour, edit `--accent`.
 
-## Going live (when the domain is ready)
+## Live site
 
-Upload everything except `_tools/node_modules` to any static host, such as Netlify, Cloudflare Pages, Vercel or GitHub Pages, and point the domain at it. Keep large showreels under about 20 MB each, or host them on YouTube or Vimeo.
+The site is live at https://sethiaadi25-dev.github.io/nirakar/, published from https://github.com/sethiaadi25-dev/nirakar.
+Every push to `main` redeploys it automatically through `.github/workflows/pages.yml`. `_tools/` stays on this PC and is never uploaded.
+
+When the domain is ready, add it under the repo's Settings → Pages → Custom domain, and point the domain's DNS at GitHub Pages.
+Keep large showreels under about 20 MB each, or host them on YouTube or Vimeo.
