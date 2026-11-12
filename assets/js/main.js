@@ -403,6 +403,21 @@
           </div>
         </div>`;
 
+      // Website screenshots inside a browser window / phone you can scroll (data-lenis-prevent keeps smooth scroll out of them)
+      const browserFrame = (src, url, small) => `
+        <div class="bw${small ? ' bw--small' : ''}" data-reveal-media>
+          <div class="bw__bar"><i></i><i></i><i></i><span class="mono">${esc(url || '')}</span></div>
+          <div class="bw__view" data-lenis-prevent data-cursor="Scroll" tabindex="0" aria-label="Screenshot of ${esc(url || p.title)}, scrollable">
+            <img src="${img(p.slug, src)}" alt="Full-page screenshot of ${esc(url || p.title)}" loading="lazy" decoding="async">
+          </div>
+        </div>`;
+      const phoneFrame = src => `
+        <div class="ph" data-reveal-media>
+          <div class="ph__view" data-lenis-prevent data-cursor="Scroll" tabindex="0" aria-label="Phone screenshot, scrollable">
+            <img src="${img(p.slug, src)}" alt="Phone layout of ${esc(p.title)}" loading="lazy" decoding="async">
+          </div>
+        </div>`;
+
       const blocks = (p.story || []).map(b => {
         switch (b.type) {
           case 'text':
@@ -417,6 +432,10 @@
             return `<section class="b-reels"><div class="b-reels__row">${b.items.map(r => `<figure>${videoFrame(r.src, r.poster, r.label)}<figcaption class="mono"><span>◯</span><span>${esc(r.label)}</span></figcaption></figure>`).join('')}</div></section>`;
           case 'facts':
             return `<dl class="b-facts" data-fade>${b.items.map(([k, v]) => `<div><dt class="mono">${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
+          case 'site':
+            return `<section class="b-site"><div class="b-site__row">${browserFrame(b.desktop, b.url)}${b.mobile ? phoneFrame(b.mobile) : ''}</div>${b.caption ? `<figcaption class="mono"><span>◯</span><span>${esc(b.caption)}</span></figcaption>` : ''}</section>`;
+          case 'browsers':
+            return `<section class="b-browsers"><div class="b-gallery__grid" style="--cols:${b.cols || 2}">${b.items.map(([src, url]) => browserFrame(src, url, true)).join('')}</div>${b.caption ? `<figcaption class="mono"><span>◯</span><span>${esc(b.caption)}</span></figcaption>` : ''}</section>`;
           case 'quote':
             return `<blockquote class="b-quote" data-fade>${esc(b.text)}</blockquote>`;
           default:
@@ -428,7 +447,10 @@
         <section class="p-hero">
           <div class="p-hero__top">
             <a class="mono dim" href="index.html#index">← All work</a>
-            <span class="badge">${esc(p.status)}</span>
+            <span class="p-hero__right">
+              ${p.link ? `<a class="btn btn--small" href="${esc(p.link)}" target="_blank" rel="noopener">Visit site ↗</a>` : ''}
+              <span class="badge">${esc(p.status)}</span>
+            </span>
           </div>
           <h1 class="p-hero__title display"><span class="line-mask"><span>${chars(p.title)}</span></span></h1>
           <p class="p-hero__kicker serif-i">${esc(p.kicker)}</p>

@@ -21,6 +21,10 @@
      { type: 'reels',   items: [{ src, poster, label }] }      (row of vertical videos)
      { type: 'facts',   items: [['label','value'], …] }
      { type: 'quote',   text: '…' }
+     { type: 'site',    desktop: 'page-home', mobile: 'page-home-mobile', url: 'example.com', caption: '…' }  (browser + phone you can scroll inside)
+     { type: 'browsers', items: [['page-courses', 'example.com/courses']], cols: 2, caption: '…' }
+
+   Add  link: 'https://…'  to a project to show a “Visit site” button on its page.
    ========================================================================== */
 
 window.NIRAKAR = {
@@ -29,7 +33,7 @@ window.NIRAKAR = {
     tagline: 'Out of the formless.',
     intro: 'A studio for ideas that don’t have a shape yet.',
     manifesto: 'Nirakar — निराकार — means formless. Every world, frame and mark we make begins as nothing. We give it a shape.',
-    disciplines: ['Game Design', '3D Animation', 'Set Design', 'Motion Graphics', 'Branding', 'Fashion'],
+    disciplines: ['Game Design', '3D Animation', 'Set Design', 'Motion Graphics', 'Branding', 'Web Design', 'Fashion'],
     instagram: 'https://www.instagram.com/nirakar.co/',
     instagramHandle: '@nirakar.co',
     email: 'nirakar.company@gmail.com',   // leave '' to hide the email button
@@ -169,6 +173,61 @@ window.NIRAKAR = {
           'Short vertical reels for social media that explain how learning works: the four zones (comfort, fear, learning and growth), observation, and the stories behind great minds. Each reel is built in After Effects in the brand’s colours and type.' ] },
         { type: 'image', src: 'zones-sheet', caption: '“Four Zones”: frame sheet.', size: 'wide' },
         { type: 'gallery', items: ['intro-still', 'observation-still', 'perelman-still'], cols: 3 },
+      ],
+    },
+
+    // ------------------------------------------------------------------------
+    {
+      slug: 'aadi-sethi-site',
+      title: 'Aadi Sethi — Portfolio',
+      kicker: 'A personal site where your cursor renders the world.',
+      disciplines: ['Web Design'],
+      status: 'Live',
+      year: '2026',
+      role: 'Design & front-end development',
+      tools: ['HTML / CSS / JS', 'WebGL'],
+      cover: 'hero',
+      coverVideo: 'scroll-loop.mp4',
+      featured: true,
+      link: 'https://sethiaadi25-dev.github.io/',
+      summary: 'The personal portfolio of Nirakar’s founder, for 3D, game design and environment work. The hero is a live WebGL “render lens”: the scene sits in wireframe and solid view, and wherever you move the cursor, the final render burns through.',
+      story: [
+        { type: 'video', src: 'scroll.mp4', poster: 'scroll-poster', autoplay: true, caption: 'Scroll-through of the home page, recorded from the live site.' },
+        { type: 'text', title: 'The render lens', body: [
+          'Every hero scene comes from the work itself: Kinetic Redline’s Neon Avenue, the mountain street, the gaming room. Each one starts as a viewport, in wireframe, solid or clay, with a live sample counter. Move the cursor and a lens renders the final frame underneath it. Hold to render the whole frame, and click to cycle scenes.',
+          'Hand-written WebGL with no framework, so the page stays light and loads fast.' ] },
+        { type: 'site', desktop: 'page-home', mobile: 'page-home-mobile', url: 'sethiaadi25-dev.github.io', caption: 'Desktop and phone layouts. Scroll inside either frame.' },
+        { type: 'text', title: 'Structure', body: [
+          'A filterable index of selected work, a full-bleed featured case study, an about section with tools and pipeline, and a big contact call to action. Japanese labels and the red-on-black palette tie it to Kinetic Redline.' ] },
+      ],
+    },
+
+    // ------------------------------------------------------------------------
+    {
+      slug: 'a-stem-lounge-site',
+      title: 'A Stem Lounge — Website',
+      kicker: 'Find your root, online: the coaching institute’s website, from the brand up.',
+      disciplines: ['Web Design', 'Branding'],
+      status: 'Live — in progress',
+      year: '2026',
+      role: 'Design & development',
+      tools: ['Astro', 'Cloudflare Workers', 'Google Sheets'],
+      cover: 'hero',
+      coverVideo: 'scroll-loop.mp4',
+      featured: true,
+      client: 'A Stem Lounge',
+      link: 'https://astemlounge.com',
+      summary: 'The website for A Stem Lounge, built on the brand we designed for it. It’s warm and editorial, with the root sign framing every headline, and it’s made for parents and JEE / NEET students to read on their phones.',
+      story: [
+        { type: 'video', src: 'scroll.mp4', poster: 'scroll-poster', autoplay: true, caption: 'Scroll-through of the home page.' },
+        { type: 'text', title: 'Built on the brand', body: [
+          'The square-root sign from the logo becomes the frame for every big headline. The site uses DM Serif Display and Poppins, crimson and gold on ivory, and illustrations in the brand colours, like “built for volume” versus “built for you”.',
+          'The story runs in order: why three teachers left big coaching, what really stops students, and why the room has twenty-eight chairs.' ] },
+        { type: 'site', desktop: 'page-home', mobile: 'page-home-mobile', url: 'astemlounge.com', caption: 'Home page on desktop and phone. Scroll inside either frame.' },
+        { type: 'text', title: 'What’s inside', body: [
+          'There’s a page for every 2027 entrance exam, including JEE Main, JEE Advanced, BITSAT and KCET, each with dates and what to do next. The free Study Check is an 8-minute quiz with no sign-up that gives back a 21-day plan. There are also course details, the founders’ journey, and a contact page with WhatsApp.',
+          'Enquiries go straight to a Google Sheet through a small Cloudflare Worker. The text and photos can be edited through simple forms, without touching code.' ] },
+        { type: 'browsers', items: [['page-journey', 'astemlounge.com/our-journey'], ['page-courses', 'astemlounge.com/courses'], ['page-exams', 'astemlounge.com/exams-2027'], ['page-exam-page', 'astemlounge.com/exams-2027/jee-main'], ['page-study-check', 'astemlounge.com/study-check'], ['page-contact', 'astemlounge.com/contact']], cols: 2, caption: 'Inner pages. Scroll inside each window.' },
       ],
     },
 
