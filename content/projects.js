@@ -141,6 +141,36 @@ window.NIRAKAR = {
 
     // ------------------------------------------------------------------------
     {
+      slug: 'imitation',
+      title: 'Imitation',
+      kicker: 'Imitation is the sincerest form of flattery.',
+      disciplines: ['Set Design', 'Fashion'],
+      status: 'Wrapped — fashion editorial',
+      year: '2026',
+      role: 'Set design',
+      tools: ['Real set', 'Practical lighting'],
+      cover: 'table',
+      coverVideo: 'film-loop.mp4',
+      featured: true,
+      summary: 'A fashion editorial film about taste: who owns it, who borrows it, and what is left once you trade it away. We built the room it happens in, a candlelit dinner party where everyone plays a part.',
+      story: [
+        { type: 'video', src: 'film.mp4', poster: 'film-poster', caption: 'The full editorial film. Turn the sound on.' },
+        { type: 'quote', text: 'What does it mean to have your own taste?' },
+        { type: 'text', title: 'The room', body: [
+          'One long table and one long night. Heavy curtains, white flowers, crystal and dripping candles, with every surface layered so the camera could find a still life wherever it pointed.',
+          'The light comes from inside the set: candles and a few warm practicals, pushed into deep amber, so the room feels like an old photograph you’ve walked into.' ] },
+        { type: 'image', src: 'table', caption: 'The dinner table, dressed and lit by candle.', size: 'full' },
+        { type: 'gallery', items: ['dinner', 'pour', 'cards', 'letter'], cols: 2, caption: 'Props that carry the story: the toast, the pour, the card game and the sealed letter.' },
+        { type: 'text', title: 'Corners', body: [
+          'Around the table, the set breaks into smaller corners: a draped sofa, a curtain wall and a coloured side room. Each one gets its own light and colour, so every character has somewhere to belong.' ] },
+        { type: 'gallery', items: ['red-tie', 'cards-2', 'toast', 'jewel', 'purple', 'pink-couch', 'blue-suit', 'gold', 'card-end'], cols: 3 },
+        { type: 'image', src: 'black-white', caption: 'Out of the colour, for one beat.', size: 'wide' },
+        { type: 'gallery', items: ['title-card', 'card-taste', 'card-remains'], cols: 3, caption: 'Intertitles: “Imitation is the sincerest form of flattery.” “What does it mean to have your own taste?” “If you exchange what defines you, what remains?”' },
+      ],
+    },
+
+    // ------------------------------------------------------------------------
+    {
       slug: 'a-stem-lounge',
       title: 'A Stem Lounge',
       kicker: 'Find your root. The full identity, motion and web for a JEE / NEET learning space.',
