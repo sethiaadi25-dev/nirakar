@@ -154,6 +154,7 @@ window.NIRAKAR = {
       featured: true,
       summary: 'Set design for a fashion editorial film about taste: who owns it, who borrows it, and what is left when you trade it away. The set is one long candlelit dinner table, dressed so that every object looks as if it once belonged to someone else.',
       story: [
+        { type: 'video', src: 'film.mp4', poster: 'film-poster', caption: 'The editorial film. Turn the sound on.' },
         { type: 'image', src: 'table-wide', caption: 'The table: a gilded centrepiece, dripping candles, white flowers and a woven basket, in deep amber.', size: 'full' },
         { type: 'facts', items: [['Set', 'One dinner table'], ['Light', 'Candles + practicals'], ['Palette', 'Amber · crimson · ivory'], ['Film', '113 s']] },
         { type: 'text', title: 'The table', body: [
@@ -165,7 +166,6 @@ window.NIRAKAR = {
         { type: 'gallery', items: ['red-card', 'fur-plate', 'vase', 'letter-candle'], cols: 2 },
         { type: 'image', src: 'top-down', caption: 'Top-down: florals, plates, cards, keepsakes and bottles, arranged as one composition.', size: 'full' },
         { type: 'image', src: 'wax-seal', caption: 'The sealed letter, the last prop on the table.', size: 'wide' },
-        { type: 'video', src: 'film.mp4', poster: 'film-poster', caption: 'The full editorial film, with sound.' },
         { type: 'gallery', items: ['title-card', 'card-taste', 'card-remains'], cols: 3, caption: 'Intertitles: “Imitation is the sincerest form of flattery.” “What does it mean to have your own taste?” “If you exchange what defines you, what remains?”' },
         { type: 'facts', items: [['Set design', 'Aadi Sethi, Navneet Shivkumar'], ['Creative direction & camera', 'Navneet Shivkumar'], ['Styling', 'Maithili Kakad, Jar Gaikwad'], ['Make-up & hair', 'Maithili Kakad']] },
       ],
